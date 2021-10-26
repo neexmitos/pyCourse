@@ -1,0 +1,7 @@
+n = int(input())
+first2Fig = (n // 10)
+lastFig = (n % 10)
+firstFig = (first2Fig // 10)
+secondFig = (first2Fig % 10)
+print(first2Fig)
+print(lastFig + firstFig + secondFig)
