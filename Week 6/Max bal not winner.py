@@ -28,16 +28,32 @@ for pupil in pupils:
         ten.append(pupil.score)
     else:
         eleven.append(pupil.score)
-for i in nine:
-    tempN = max(nine)
-    if tempN < i:
-        countN += 1
-for i in ten:
-    tempT = max(ten)
-    if tempT == i:
-        countT += 1
-for i in eleven:
-    tempE = max(eleven)
-    if tempE == i:
-        countE += 1
-print(nine, ten, eleven)
+mN = max(nine)
+nineNew = nine.copy()
+nineNew.sort(reverse=True)
+for n in nineNew:
+    if mN == n:
+        nine.remove(mN)
+    mN = max(nine)
+mT = max(ten)
+tenNew = ten.copy()
+for t in tenNew:
+    if mT == t:
+        ten.remove(mT)
+    mT = max(ten)
+mE = max(eleven)
+elevenNew = eleven.copy()
+for e in elevenNew:
+    if mE == e:
+        eleven.remove(mE)
+    mE = max(eleven)
+
+        # for i in ten:
+#     tempT = max(ten)
+#     if tempT == i:
+#         countT += 1
+# for i in eleven:
+#     tempE = max(eleven)
+#     if tempE == i:
+#         countE += 1
+print(*nine, *ten, *eleven)
