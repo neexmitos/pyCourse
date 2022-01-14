@@ -7,6 +7,7 @@ for line in inFile:
     tempList += (line.split('\n'))
 inFile.close()
 tempList = list(filter(None, tempList))
+print(tempList)
 for i in range(len(tempList) - 1):
     if tempList[i + 1] == 'YES':
         listYes &= set(map(int, tempList[i].split()))

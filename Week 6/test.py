@@ -1,9 +1,9 @@
-myList = list(map(int, input().split()))
-grades =[0] * 11
-for now in myList:
-    grades[now] += 1
-for grade in range(len(grades)):
-    for i in range(grades[grade]):
-        print(grade, end=' ')
+mySet1 = {'Russian', 'English', 'Japanese'}
+mySet2 = {'Russian', 'English'}
+mySet3 = {'English', 'German'}
 
-    # print((str(grade) + ' ') * grades[grade], end='')
+n = mySet1 & mySet2
+m = mySet1 | mySet2
+
+print(n, m) # значение которое есть во всех 3 сетах
+# print(mySet1 ^ mySet2 ^ mySet3)
