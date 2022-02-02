@@ -1,4 +1,1 @@
-firstSet = {1,1,2,3,4,6,7,8,9,10}
-secondSet = {1,2,3,4,6,7,8,9,10}
-print(firstSet - secondSet)
-
+print (7 % 2)
